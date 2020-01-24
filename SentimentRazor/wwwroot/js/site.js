@@ -1,4 +1,40 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿/* make a GET HTTP request with the user input to the 
+OnGetAnalyzeSentiment handler.*/
+function getSentiment(userInput) {
+    return fetch(`Index?handler=AnalyzeSentiment&text=${userInput}`)
+        .then((response) => {
+            return response.text();
+        })
+}
 
-// Write your Javascript code.
+/* Dynamically update the position of the marker on
+ the web page as sentiment is predicted.*/
+function updateMarker(markerPosition, sentiment) {
+    $("#markerPosition").attr("style", `left:${markerPosition}%`);
+    $("#markerValue").text(sentiment);
+}
+
+/* Get the input from the user, send it to the 
+ * OnGetAnalyzeSentiment function using the getSentiment
+ * function and update the marker with the updateMarker */
+function updateSentiment() {
+
+    var userInput = $("#Message").val();
+
+    getSentiment(userInput)
+        .then((sentiment) => {
+            switch (sentiment) {
+                case "Positive":
+                    updateMarker(100.0, sentiment);
+                    break;
+                case "Negative":
+                    updateMarker(0.0, sentiment);
+                    break;
+                default:
+                    updateMarker(45.0, "Neutral");
+            }
+        });
+}
+
+// Register the event handler and bind it to the textarea element with the id=Message attribute.
+$("#Message").on('change input paste', updateSentiment)

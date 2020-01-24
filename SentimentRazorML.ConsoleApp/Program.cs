@@ -11,7 +11,7 @@ namespace SentimentRazorML.ConsoleApp
     class Program
     {
         //Dataset to use for predictions 
-        private const string DATA_FILEPATH = @"C:\Users\Kenne\OneDrive\Skrivebord\wikipedia-detox-250-line-data.tsv.txt";
+        private const string DATA_FILEPATH = @"C:\Users\Kenne\source\repos\SentimentRazor\sentiment labelled sentences\yelp_labelled.tsv";
 
         static void Main(string[] args)
         {
