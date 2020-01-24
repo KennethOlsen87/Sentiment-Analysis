@@ -36,3 +36,6 @@ function updateSentiment() {
             }
         });
 }
+
+// Register the event handler and bind it to the textarea element with the id=Message attribute.
+$("#Message").on('change input paste', updateSentiment)
