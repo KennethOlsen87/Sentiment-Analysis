@@ -7,7 +7,6 @@ function getSentiment(userInput) {
         })
 }
 
-
 /* Dynamically update the position of the marker on
  the web page as sentiment is predicted.*/
 function updateMarker(markerPosition, sentiment) {
@@ -25,10 +24,10 @@ function updateSentiment() {
     getSentiment(userInput)
         .then((sentiment) => {
             switch (sentiment) {
-                case "Not Toxic":
+                case "Positive":
                     updateMarker(100.0, sentiment);
                     break;
-                case "Toxic":
+                case "Negative":
                     updateMarker(0.0, sentiment);
                     break;
                 default:

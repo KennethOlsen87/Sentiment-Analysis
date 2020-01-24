@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentimentRazor", "SentimentRazor\SentimentRazor.csproj", "{251E4728-84A6-40FA-AC16-218BE94415BA}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentimentRazorML.Model", "SentimentRazorML.Model\SentimentRazorML.Model.csproj", "{DBA76234-DBA5-480E-9FFE-9C91EC2FF110}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentimentRazorML.ConsoleApp", "SentimentRazorML.ConsoleApp\SentimentRazorML.ConsoleApp.csproj", "{6EE5628C-2A79-4A1F-B01C-EEA447027E85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{251E4728-84A6-40FA-AC16-218BE94415BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{251E4728-84A6-40FA-AC16-218BE94415BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{251E4728-84A6-40FA-AC16-218BE94415BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA76234-DBA5-480E-9FFE-9C91EC2FF110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA76234-DBA5-480E-9FFE-9C91EC2FF110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA76234-DBA5-480E-9FFE-9C91EC2FF110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA76234-DBA5-480E-9FFE-9C91EC2FF110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EE5628C-2A79-4A1F-B01C-EEA447027E85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EE5628C-2A79-4A1F-B01C-EEA447027E85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EE5628C-2A79-4A1F-B01C-EEA447027E85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EE5628C-2A79-4A1F-B01C-EEA447027E85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

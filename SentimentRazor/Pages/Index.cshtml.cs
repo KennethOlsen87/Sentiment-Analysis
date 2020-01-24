@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.ML;
 using SentimentRazorML.Model;
-
-
-
-
 
 namespace SentimentRazor.Pages
 {
@@ -34,27 +26,13 @@ namespace SentimentRazor.Pages
 
             // Given a valid input, create a new instance of ModelInput.
             var input = new ModelInput { SentimentText = text };
-            //Use the PredictionEnginePool to predict sentiment.
+            // Use the PredictionEnginePool to predict sentiment.
             var prediction = _predictionEnginePool.Predict(input);
             // Convert the predicted bool value into toxic or not toxic.
-            var sentiment = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+            var sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
 
             // Return the sentiment back to the web page.
             return Content(sentiment);
-
         }
-
-
-        //private readonly ILogger<IndexModel> _logger;
-
-        //public IndexModel(ILogger<IndexModel> logger)
-        //{
-        //    _logger = logger;
-        //}
-
-        //public void OnGet()
-        //{
-
-        //}
     }
 }
